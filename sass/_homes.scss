@@ -12,6 +12,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 3.5rem;
+    transition: transform 0.4s;
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.05);
+    }
 
     &__img {
         width: 100%;
