@@ -6,6 +6,9 @@
 
 .heading-1 {
     @extend %heading;
+    font-size: 4.5rem;
+    color: $color-grey-light-1;
+    line-height: 1;
 }
 
 .heading-2 {
@@ -40,6 +43,39 @@
 
     &--dark {
         color: $color-grey-dark-1;
+    }
+}
+
+.header__btn {
+    transition: all 0.3s;
+}
+
+.header__btn:hover {
+    animation: buttonAnimation 1s infinite;
+}
+
+.header__btn:active {
+    animation: buttonActive 0.5s;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes buttonActive {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(0.95) translateY(1rem);
     }
 }
 
